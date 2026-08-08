@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: CV & Parcours
+lang: fr
+permalink: /cv/
+---
+<span class="kicker">Dossier § 6 — Parcours</span>
+<h1>Curriculum Vitae</h1>
+<p class="lede">
+  Parcours académique, diplômes, distinctions, expériences d'enseignement et compétences.
+</p>
+
+<h2>Formation & Diplômes</h2>
+{% for edu in site.education %}
+<div class="card">
+  <span class="card__label">{{ edu.years }}</span>
+  <h3>{{ edu.title_fr }}</h3>
+  <p><strong>Établissement :</strong> {{ edu.institution }}</p>
+  {% if edu.details_fr %}<p style="margin-top: 0.2rem; color: var(--pink-deep); font-weight: 700;">{{ edu.details_fr }}</p>{% endif %}
+</div>
+{% endfor %}
+
+<h2>Expériences d'Enseignement</h2>
+{% for t in site.teaching %}
+<div class="card">
+  <span class="card__label">{{ t.period }}</span>
+  <h3>{% if t.url %}<a href="{{ t.url }}" target="_blank" rel="noopener">{{ t.title_fr }}</a>{% else %}{{ t.title_fr }}{% endif %}</h3>
+  {% if t.institutions %}<p><strong>Établissements :</strong> {{ t.institutions }}</p>{% endif %}
+  {% if t.details_fr %}<p style="margin-top: 0.2rem;">{{ t.details_fr }}</p>{% endif %}
+</div>
+{% endfor %}
+
+<h2>Compétences & Langues</h2>
+<div class="card">
+  <span class="card__label">Informatique & Outils</span>
+  <p>{{ site.skills.programming }}</p>
+</div>
+<div class="card">
+  <span class="card__label">Langues</span>
+  <p>{{ site.skills.languages.fr }}</p>
+</div>

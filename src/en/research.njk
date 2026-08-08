@@ -1,0 +1,75 @@
+---
+layout: base.njk
+title: Research
+lang: en
+permalink: /en/research/
+---
+<span class="kicker">Research Project</span>
+<h1>Research Overview & Past Projects</h1>
+<p class="lede">
+  Boundary Integrals for wave scattering by closely situated thin particles structures.
+</p>
+
+<h2>Context & Motivation</h2>
+<p>
+  Thin particles structures refer to systems (material structures, particles, crack-like voids) where one characteristic length is much smaller than the other(s). Such structure typically arises in electromagnetism (strong field enhancement by thin nanoparticles, in photonic crystals made of periodic assembling of nano-rods, or metasurfaces with disordered dielectric rods).
+</p>
+<p>
+  It is fundamental to understand how the near-field is affected by a thin particle, as well as understanding how the coupling effects caused by several ones (number and sizes) contribute to field enhancement.
+</p>
+
+<h2>Methodological Framework: Boundary Integral Equations (BIE)</h2>
+<p>
+  Due to inherently high anisotropy and localized field interactions, it is particularly appealing to use boundary integral equations. BIE methods offer several advantages:
+</p>
+<ul>
+  <li><strong>Dimension reduction</strong> of the problem to the boundary, significantly reducing computational costs.</li>
+  <li><strong>High accuracy</strong> to compute boundary data, allowing evaluation of the field anywhere in the domain without restriction to a particular mesh.</li>
+</ul>
+<p>
+  BIE methods provide valuable physical insight over all scales of the problem, and they generalize easily to more complex problems including multiply connected domains, e.g. ensembles of thin particles.
+</p>
+
+<h2>Scientific Challenge: The Close Evaluation Problem</h2>
+<p>
+  One of the main challenges in BIE methods is the so-called <em>close evaluation problem</em>: layer potentials become nearly-singular integrals and large errors occur when computing them.
+</p>
+<div class="card">
+  <span class="card__label">Twofold Evaluation Challenge</span>
+  <h3>The close evaluation problem in thin particles structures is twofold:</h3>
+  <ol style="margin: 0.5rem 0 0 1.2rem; padding: 0; color: var(--ink-soft);">
+    <li>It becomes difficult to evaluate near-field close to thin structures.</li>
+    <li>It is enhanced at the BIE level due to boundaries close to each other (between two particles or from each side of the particle).</li>
+  </ol>
+</div>
+
+<h2>Thesis Objective</h2>
+<p>
+  This thesis, supervised by <a href="{{ site.advisor_url }}" target="_blank" rel="noopener"><strong>{{ site.advisor }}</strong></a> within the <a href="{{ site.team_url }}" target="_blank" rel="noopener"><strong>{{ site.team.en }}</strong></a> team at <a href="{{ site.lab_url }}" target="_blank" rel="noopener"><strong>{{ site.lab.en }}</strong></a>, aims at developing efficient quadrature methods for boundary integral equations that address the close evaluation problem, and allow to efficiently characterize the near-field within multiple scattering by thin particles structures.
+</p>
+
+<h2>Past Research Internships & Projects</h2>
+{% for internship in site.internships %}
+<div class="card">
+  <span class="card__label">{{ internship.date_en }} · {{ internship.location }}</span>
+  <h3>{% if internship.url %}<a href="{{ internship.url }}" target="_blank" rel="noopener">{{ internship.title_en }}</a>{% else %}{{ internship.title_en }}{% endif %}</h3>
+  <p style="margin-top: 0.3rem;"><strong>Supervisor:</strong> {{ internship.supervisor }}</p>
+  <p style="margin-top: 0.4rem;">{{ internship.details_en }}</p>
+</div>
+{% endfor %}
+
+<div class="card">
+  <span class="card__label">2022 · University of Strasbourg</span>
+  <h3>Bachelor Theses (L3)</h3>
+  <ul style="margin: 0.4rem 0 0 1.2rem; padding: 0; color: var(--ink-soft); font-size: 0.95rem;">
+    <li><strong>Julia Curves without Tangents</strong> (Supervised by Charles Francès).</li>
+    <li><strong>Scientific Computing: Finite-difference blood flow modeling</strong> (With Ewan Contentin, supervised by Clémentine Courtès).</li>
+  </ul>
+</div>
+
+<h2>Keywords</h2>
+<div class="tag-list">
+  {% for kw in site.keywords.en %}
+    <span class="tag">{{ kw }}</span>
+  {% endfor %}
+</div>

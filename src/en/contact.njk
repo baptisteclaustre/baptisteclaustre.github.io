@@ -1,0 +1,60 @@
+---
+layout: base.njk
+title: Contact
+lang: en
+permalink: /en/contact/
+---
+<span class="kicker">Contact</span>
+<h1>Contact Information</h1>
+<p class="lede">
+  Feel free to reach out by email or visit Institut Camille Jordan at INSA Lyon.
+</p>
+
+<dl class="contact-grid">
+  <div class="contact-row">
+    <dt>Email</dt>
+    <dd><code class="email-box">{{ site.email_display }}</code></dd>
+  </div>
+  <div class="contact-row">
+    <dt>Institution</dt>
+    <dd><a href="{{ site.institution_url }}" target="_blank" rel="noopener">{{ site.institution.en }}</a></dd>
+  </div>
+  <div class="contact-row">
+    <dt>Team</dt>
+    <dd><a href="{{ site.team_url }}" target="_blank" rel="noopener">{{ site.team.en }}</a></dd>
+  </div>
+  <div class="contact-row">
+    <dt>Laboratory</dt>
+    <dd><a href="{{ site.lab_url }}" target="_blank" rel="noopener">{{ site.lab.en }}</a></dd>
+  </div>
+  <div class="contact-row">
+    <dt>Supervisor</dt>
+    <dd><a href="{{ site.advisor_url }}" target="_blank" rel="noopener">{{ site.advisor }}</a></dd>
+  </div>
+  {% if site.orcid %}
+  <div class="contact-row">
+    <dt>ORCID</dt>
+    <dd><a href="https://orcid.org/{{ site.orcid }}">{{ site.orcid }}</a></dd>
+  </div>
+  {% endif %}
+  {% if site.github %}
+  <div class="contact-row">
+    <dt>GitHub</dt>
+    <dd><a href="https://github.com/{{ site.github }}">@{{ site.github }}</a></dd>
+  </div>
+  {% endif %}
+  {% if site.linkedin %}
+  <div class="contact-row">
+    <dt>LinkedIn</dt>
+    <dd><a href="{{ site.linkedin }}">LinkedIn Profile</a></dd>
+  </div>
+  {% endif %}
+</dl>
+
+<h2>Postal Address</h2>
+<p>
+  Institut Camille Jordan — UMR 5208<br>
+  <a href="{{ site.institution_url }}" target="_blank" rel="noopener">INSA Lyon</a><br>
+  Leonard de Vinci Building<br>
+  21 Avenue Jean Capelle, 69621 Villeurbanne Cedex, France
+</p>

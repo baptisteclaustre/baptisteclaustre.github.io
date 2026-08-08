@@ -1,0 +1,41 @@
+---
+layout: base.njk
+title: Curriculum Vitae
+lang: en
+permalink: /en/cv/
+---
+<span class="kicker">Background</span>
+<h1>Curriculum Vitae</h1>
+<p class="lede">
+  Academic education, degrees, honors, teaching experience, and technical skills.
+</p>
+
+<h2>Education & Degrees</h2>
+{% for edu in site.education %}
+<div class="card">
+  <span class="card__label">{{ edu.years }}</span>
+  <h3>{{ edu.title_en }}</h3>
+  <p><strong>Institution:</strong> {{ edu.institution }}</p>
+  {% if edu.details_en %}<p style="margin-top: 0.2rem; color: var(--pink-deep); font-weight: 700;">{{ edu.details_en }}</p>{% endif %}
+</div>
+{% endfor %}
+
+<h2>Teaching Experience</h2>
+{% for t in site.teaching %}
+<div class="card">
+  <span class="card__label">{{ t.period_en or t.period }}</span>
+  <h3>{% if t.url %}<a href="{{ t.url }}" target="_blank" rel="noopener">{{ t.title_en }}</a>{% else %}{{ t.title_en }}{% endif %}</h3>
+  {% if t.institutions %}<p><strong>Institutions:</strong> {{ t.institutions }}</p>{% endif %}
+  {% if t.details_en %}<p style="margin-top: 0.2rem;">{{ t.details_en }}</p>{% endif %}
+</div>
+{% endfor %}
+
+<h2>Skills & Languages</h2>
+<div class="card">
+  <span class="card__label">Programming & Scientific Computing</span>
+  <p>{{ site.skills.programming }}</p>
+</div>
+<div class="card">
+  <span class="card__label">Languages</span>
+  <p>{{ site.skills.languages.en }}</p>
+</div>

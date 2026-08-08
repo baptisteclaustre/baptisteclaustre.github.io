@@ -1,0 +1,39 @@
+---
+layout: base.njk
+title: Home
+lang: en
+permalink: /en/
+---
+<span class="kicker">Overview</span>
+<h1>{{ site.name }}</h1>
+<p class="lede">
+  {{ site.role.en }} in {{ site.field.en }} within the <a href="{{ site.team_url }}" target="_blank" rel="noopener">{{ site.team.en }}</a> team at <a href="{{ site.lab_url }}" target="_blank" rel="noopener">{{ site.lab.en }}</a> (<a href="{{ site.institution_url }}" target="_blank" rel="noopener">{{ site.institution.en }}</a>).
+</p>
+
+<h2>Short Bio</h2>
+<p>
+  Alumnus of <strong>École Normale Supérieure de Lyon</strong> and recipient of the <strong>Agrégation de Mathématiques</strong> (2025), my research focuses on boundary integral equations (BIE) and numerical analysis for wave scattering.
+</p>
+
+<h2>PhD Thesis Project</h2>
+<div class="card">
+  <span class="card__label">Thesis Subject</span>
+  <h3>{{ site.thesis_title.en }}</h3>
+  <p style="margin-top: 0.5rem;">
+    <strong>Supervisor:</strong> <a href="{{ site.advisor_url }}" target="_blank" rel="noopener">{{ site.advisor }}</a>
+  </p>
+</div>
+
+<p>
+  My research focuses on thin particle structures (materials, nanoparticles, photonic crystals, metasurfaces) and developing efficient boundary integral equation (BIE) methods to solve the close evaluation problem in wave scattering.
+</p>
+<p>
+  <a href="/en/research/">Read full research project description →</a>
+</p>
+
+<h2>Keywords</h2>
+<div class="tag-list">
+  {% for kw in site.keywords.en %}
+    <span class="tag">{{ kw }}</span>
+  {% endfor %}
+</div>

@@ -1,0 +1,38 @@
+---
+layout: base.njk
+title: Accueil
+lang: fr
+---
+<span class="kicker">Dossier § 1 — Présentation</span>
+<h1>{{ site.name }}</h1>
+<p class="lede">
+  {{ site.role.fr }} en {{ site.field.fr }} au sein de l'équipe <a href="{{ site.team_url }}" target="_blank" rel="noopener">{{ site.team.fr }}</a> à l'<a href="{{ site.lab_url }}" target="_blank" rel="noopener">{{ site.lab.fr }}</a> (<a href="{{ site.institution_url }}" target="_blank" rel="noopener">{{ site.institution.fr }}</a>).
+</p>
+
+<h2>En bref</h2>
+<p>
+  Ancien élève de l'<strong>École Normale Supérieure de Lyon</strong> et reçu à l'<strong>Agrégation externe de mathématiques</strong> (2025), mes travaux portent sur les équations intégrales de frontière (BIE) et l'analyse numérique pour la diffraction d'ondes.
+</p>
+
+<h2>Projet de Thèse</h2>
+<div class="card">
+  <span class="card__label">Sujet de Thèse</span>
+  <h3>{{ site.thesis_title.fr }}</h3>
+  <p style="margin-top: 0.5rem;">
+    <strong>Supervisor :</strong> <a href="{{ site.advisor_url }}" target="_blank" rel="noopener">{{ site.advisor }}</a>
+  </p>
+</div>
+
+<p>
+  Mes travaux de recherche s'intéressent aux structures de particules allongées (nanoparticules, cristaux photoniques, métasurfaces) et au développement de méthodes d'équations intégrales de frontière efficaces pour résoudre le problème d'évaluation en champ proche.
+</p>
+<p>
+  <a href="/recherche/">Présentation détaillée du projet de recherche →</a>
+</p>
+
+<h2>Mots-clés</h2>
+<div class="tag-list">
+  {% for kw in site.keywords.fr %}
+    <span class="tag">{{ kw }}</span>
+  {% endfor %}
+</div>

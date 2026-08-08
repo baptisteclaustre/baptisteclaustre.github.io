@@ -1,0 +1,167 @@
+{
+  "name": "Baptiste Claustre",
+  "role": {
+    "fr": "Doctorant",
+    "en": "PhD Student"
+  },
+  "team": {
+    "fr": "Modélisation mathématique, calcul scientifique",
+    "en": "Mathematical Modeling and Scientific Computing"
+  },
+  "team_url": "https://math.univ-lyon1.fr/icj/modelisation-mathematique-calcul-scientifique/",
+  "lab": {
+    "fr": "Institut Camille Jordan (ICJ)",
+    "en": "Camille Jordan Institute (ICJ)"
+  },
+  "lab_url": "https://math.univ-lyon1.fr/icj/",
+  "institution": {
+    "fr": "INSA de Lyon",
+    "en": "INSA Lyon"
+  },
+  "institution_url": "https://www.insa-lyon.fr",
+  "field": {
+    "fr": "Mathématiques appliquées",
+    "en": "Applied mathematics"
+  },
+  "advisor": "Camille CARVALHO",
+  "advisor_url": "https://camillecarvalho.org",
+  "email": "baptiste . claustre [at] insa - lyon . fr",
+  "email_display": "baptiste . claustre [at] insa-lyon.fr",
+  "orcid": "",
+  "github": "",
+  "linkedin": "",
+  "year": "2026",
+  "thesis_title": {
+    "fr": "Méthodes intégrales de frontière pour la diffraction des ondes par des structures de particules allongées et rapprochées",
+    "en": "Boundary Integrals for wave scattering by closely situated thin particles structures"
+  },
+  "keywords": {
+    "fr": [
+      "équations intégrales de frontière",
+      "diffraction des ondes",
+      "analyse numérique",
+      "théorie spectrale",
+      "électromagnétisme"
+    ],
+    "en": [
+      "boundary integral equations",
+      "wave scattering",
+      "numerical analysis",
+      "spectral theory",
+      "electromagnetism"
+    ]
+  },
+  "education": [
+    {
+      "years": "2023 – 2026",
+      "title_fr": "Master de Mathématiques Avancées (Probabilités et EDP)",
+      "title_en": "Master's degree in Advanced Mathematics (Probabilities & PDEs)",
+      "institution": "École Normale Supérieure de Lyon"
+    },
+    {
+      "years": "2025",
+      "title_fr": "Agrégation de mathématiques",
+      "title_en": "Agrégation de mathématiques",
+      "details_fr": "Concours national de recrutement des enseignants de mathématiques",
+      "details_en": "French national competitive exam for higher education teaching",
+      "institution": "Éducation Nationale / ENS de Lyon"
+    },
+    {
+      "years": "2024 – 2025",
+      "title_fr": "Master MEEF (Métiers de l'Enseignement)",
+      "title_en": "Master's degree in Teaching (MEEF)",
+      "details_fr": "Mention Très Bien",
+      "details_en": "With Highest Distinction",
+      "institution": "École Normale Supérieure de Lyon"
+    },
+    {
+      "years": "2022 – 2023",
+      "title_fr": "Licence de Mathématiques",
+      "title_en": "Bachelor's degree in Mathematics",
+      "details_fr": "Mention Bien",
+      "details_en": "With Honors",
+      "institution": "École Normale Supérieure de Lyon"
+    },
+    {
+      "years": "2021 – 2022",
+      "title_fr": "Licence de Mathématiques et Physique",
+      "title_en": "Bachelor's degree in Mathematics and Physics",
+      "details_fr": "Major de promotion — Mention Très Bien",
+      "details_en": "Ranked 1st — With Highest Distinction",
+      "institution": "Université de Strasbourg"
+    },
+    {
+      "years": "2019 – 2021",
+      "title_fr": "Classes Préparatoires aux Grandes Écoles (CPGE MPSI / MP*)",
+      "title_en": "Classes Préparatoires aux Grandes Écoles (CPGE MPSI / MP*)",
+      "institution": "Lycée Carnot (Dijon)"
+    }
+  ],
+  "internships": [
+    {
+      "date": "Avr. – Août 2026",
+      "date_en": "Apr. – Aug. 2026",
+      "title_fr": "Stage de Master 2 — Équations intégrales de frontière pour bilans photoniques & motifs de Moiré",
+      "title_en": "Master 2 Internship — BIEs for photonic crystal bilayers: modeling and numerical simulations",
+      "location": "ICJ, INSA de Lyon",
+      "supervisor": "Camille Carvalho (collaboration avec l'équipe i-lum de l'INL)",
+      "details_fr": "Modélisation et simulation numérique par équations intégrales de frontière (BIE) pour l'étude des réseaux et motifs de Moiré.",
+      "details_en": "Exploring boundary integral equations (BIEs) to model and simulate Moiré patterns in collaboration with the INL i-lum team."
+    },
+    {
+      "date": "Mai – Août 2024",
+      "date_en": "May – Aug. 2024",
+      "title_fr": "Stage de Master 1 — Optimisation de forme et méthode adjointe dans maniFEM",
+      "title_en": "Master 1 Internship — Shape optimization and the adjoint method in maniFEM",
+      "location": "CMAFcIO, Université de Lisbonne (Portugal)",
+      "supervisor": "Cristian Barbarosie",
+      "details_fr": "Optimisation de forme, calcul scientifique haute performance sur cluster (programmation parallèle) et contributions au code open-source maniFEM.",
+      "details_en": "Worked on shape optimization, parallel computing on clusters using maniFEM, and code contributions.",
+      "url": "https://manifem.rd.ciencias.ulisboa.pt"
+    },
+    {
+      "date": "Mai – Juin 2023",
+      "date_en": "May – June 2023",
+      "title_fr": "Stage de Licence 3 — Théorie des jeux & trafic routier",
+      "title_en": "Bachelor Internship (L3) — Game theory & traffic flow",
+      "location": "Institut Camille Jordan, Université Lyon 1",
+      "supervisor": "Filippo Santambrogio",
+      "details_fr": "Étude des équilibres de Wardrop et du prix de l'anarchie appliqués au trafic routier.",
+      "details_en": "Study of Wardrop equilibria and the price of anarchy in road traffic."
+    }
+  ],
+  "teaching": [
+    {
+      "period": "Sept. 2023 – Présent",
+      "period_en": "Sept. 2023 – Present",
+      "title_fr": "Interrogateur oral (Colleur / Khôlleur) en Mathématiques",
+      "title_en": "Mathematics Oral Examiner (Khôlleur) in CPGE",
+      "institutions": "Lycée La Martinière Monplaisir, Lycée Édouard Branly & ENS de Lyon",
+      "details_fr": "4h/semaine pour les classes de MPSI, MP2I, PCSI. 3h/semaine pour les classes de TSI, PT. Oraux blancs CPES (ENS de Lyon).",
+      "details_en": "4 hrs/week for 1st-year CPGE (MPSI, MP2I, PCSI), 3 hrs/week for 2nd-year (TSI, PT), and mock oral exams for CPES at ENS de Lyon."
+    },
+    {
+      "period": "2025",
+      "title_fr": "Co-auteur du Cahier de Calcul (Niveau Seconde)",
+      "title_en": "Co-author of the 10th-grade Math Practice Booklet",
+      "details_fr": "Sous la direction de Colas Bardavid.",
+      "details_en": "Supervised by Colas Bardavid.",
+      "url": "https://colasbd.github.io/cdc-seconde/"
+    },
+    {
+      "period": "En cours",
+      "period_en": "Work in progress",
+      "title_fr": "Co-auteur de 4 Cahiers d'Automatismes pour le Baccalauréat (Seconde / Première)",
+      "title_en": "Co-author of 4 Math Automatism Workbooks for High School (10th/11th Grade)",
+      "details_fr": "Sous la direction de Colas Bardavid.",
+      "details_en": "Supervised by Colas Bardavid."
+    }
+  ],
+  "skills": {
+    "programming": "Python, LaTeX, maniFEM, C++, SQL",
+    "languages": {
+      "fr": "Français (langue maternelle), Anglais (C1 - Cambridge Advanced), Espagnol (B2), Néerlandais (A1)",
+      "en": "French (native), English (C1 - Cambridge Advanced), Spanish (B2), Dutch (A1)"
+    }
+  }
+}

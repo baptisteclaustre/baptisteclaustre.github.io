@@ -1,0 +1,88 @@
+{% set currentLang = lang or "fr" %}
+<!doctype html>
+<html lang="{{ currentLang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title }} — {{ site.name }}</title>
+  <meta name="description" content="Page personnelle de {{ site.name }}, {{ site.role[currentLang] | lower }} — {{ site.field[currentLang] }}.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a href="{% if currentLang == 'en' %}/en/{% else %}/{% endif %}" class="topbar__brand">
+      <span class="topbar__mark">{{ site.name | first }}</span>
+      {{ site.name }}
+    </a>
+    <nav class="topbar__nav" aria-label="Navigation principale">
+      {% if currentLang == 'en' %}
+        <a href="/en/" class="{% if page.url == '/en/' %}is-current{% endif %}">Home</a>
+        <a href="/en/research/" class="{% if page.url == '/en/research/' %}is-current{% endif %}">Research</a>
+        <a href="/enseignement/" class="{% if page.url == '/enseignement/' %}is-current{% endif %}">Teaching <span class="badge-fr">FR</span></a>
+        <a href="/en/publications/" class="{% if page.url == '/en/publications/' %}is-current{% endif %}">Publications</a>
+        <a href="/en/cv/" class="{% if page.url == '/en/cv/' %}is-current{% endif %}">CV</a>
+        <a href="/en/contact/" class="{% if page.url == '/en/contact/' %}is-current{% endif %}">Contact</a>
+      {% else %}
+        <a href="/" class="{% if page.url == '/' %}is-current{% endif %}">Accueil</a>
+        <a href="/recherche/" class="{% if page.url == '/recherche/' %}is-current{% endif %}">Recherche</a>
+        <a href="/enseignement/" class="{% if page.url == '/enseignement/' %}is-current{% endif %}">Enseignement</a>
+        <a href="/publications/" class="{% if page.url == '/publications/' %}is-current{% endif %}">Publications</a>
+        <a href="/cv/" class="{% if page.url == '/cv/' %}is-current{% endif %}">CV</a>
+        <a href="/contact/" class="{% if page.url == '/contact/' %}is-current{% endif %}">Contact</a>
+      {% endif %}
+    </nav>
+    <div class="topbar__lang" aria-label="Choix de la langue / Language selection">
+      {% if currentLang == 'fr' %}
+        {% set enTarget = '/en/' %}
+        {% if page.url == '/recherche/' %}{% set enTarget = '/en/research/' %}{% endif %}
+        {% if page.url == '/publications/' %}{% set enTarget = '/en/publications/' %}{% endif %}
+        {% if page.url == '/cv/' %}{% set enTarget = '/en/cv/' %}{% endif %}
+        {% if page.url == '/contact/' %}{% set enTarget = '/en/contact/' %}{% endif %}
+        <span class="lang-link is-active">FR</span>
+        <span class="lang-sep">|</span>
+        <a href="{{ enTarget }}" class="lang-link" title="Switch to English">EN</a>
+      {% else %}
+        {% set frTarget = '/' %}
+        {% if page.url == '/en/research/' %}{% set frTarget = '/recherche/' %}{% endif %}
+        {% if page.url == '/en/publications/' %}{% set frTarget = '/publications/' %}{% endif %}
+        {% if page.url == '/en/cv/' %}{% set frTarget = '/cv/' %}{% endif %}
+        {% if page.url == '/en/contact/' %}{% set frTarget = '/contact/' %}{% endif %}
+        <a href="{{ frTarget }}" class="lang-link" title="Passer en français">FR</a>
+        <span class="lang-sep">|</span>
+        <span class="lang-link is-active">EN</span>
+      {% endif %}
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero__container">
+      <img src="/images/photo.jpg" alt="Photo de {{ site.name }}" class="hero__avatar" width="120" height="120">
+      <div class="hero__text">
+        <p class="hero__kicker">{{ site.role[currentLang] }} · {{ site.field[currentLang] }}</p>
+        <h2 class="hero__title">{{ site.name }}</h2>
+        <p class="hero__subtitle">
+          <a href="{{ site.lab_url }}" target="_blank" rel="noopener" class="hero__link">{{ site.lab[currentLang] }}</a> — <a href="{{ site.institution_url }}" target="_blank" rel="noopener" class="hero__link">{{ site.institution[currentLang] }}</a>
+        </p>
+      </div>
+    </div>
+    <svg class="hero__wave" viewBox="0 0 1440 44" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,22 C240,44 480,0 720,14 C960,28 1200,40 1440,18 L1440,44 L0,44 Z" style="fill: var(--paper);"></path>
+    </svg>
+  </section>
+
+  <div class="page">
+    <main class="content">
+      {{ content | safe }}
+    </main>
+
+    <footer class="colophon">
+      <div class="rule"></div>
+      <p>© {{ site.year }} {{ site.name }} — <a href="{{ site.lab_url }}" target="_blank" rel="noopener">Institut Camille Jordan</a> — <a href="{{ site.institution_url }}" target="_blank" rel="noopener">INSA de Lyon</a>.</p>
+      <p class="colophon__built">{% if currentLang == 'en' %}Built with <a href="https://www.11ty.dev/">Eleventy</a>, hosted on GitHub Pages.{% else %}Site construit avec <a href="https://www.11ty.dev/">Eleventy</a>, hébergé sur GitHub Pages.{% endif %}</p>
+    </footer>
+  </div>
+</body>
+</html>
