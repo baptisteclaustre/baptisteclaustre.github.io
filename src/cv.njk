@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: CV & Parcours
+title: CV et Parcours
 lang: fr
 permalink: /cv/
 ---
@@ -10,7 +10,7 @@ permalink: /cv/
   Parcours académique, expériences d'enseignement et compétences.
 </p>
 
-<h2>Formation & Diplômes</h2>
+<h2>Formation et diplômes</h2>
 {% for edu in site.education %}
 <div class="card">
   <span class="card__label">{{ edu.years }}</span>
@@ -20,7 +20,7 @@ permalink: /cv/
 </div>
 {% endfor %}
 
-<h2>Expériences d'Enseignement</h2>
+<h2>Expériences d'enseignement</h2>
 {% for t in site.teaching %}
 <div class="card">
   <span class="card__label">{{ t.period }}</span>
@@ -30,9 +30,9 @@ permalink: /cv/
 </div>
 {% endfor %}
 
-<h2>Compétences & Langues</h2>
+<h2>Compétences et langues</h2>
 <div class="card">
-  <span class="card__label">Informatique & Outils</span>
+  <span class="card__label">Informatique et outils</span>
   <p>{{ site.skills.programming }}</p>
 </div>
 <div class="card">

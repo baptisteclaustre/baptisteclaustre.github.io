@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: base-no-header.njk
 title: Recherche
 lang: fr
 permalink: /recherche/
@@ -43,17 +43,17 @@ permalink: /recherche/
 
 <h2>Objectif de la thèse</h2>
 <p>
-  Cette thèse, supervisée par <a href="{{ site.advisor_url }}" target="_blank" rel="noopener"><strong>{{ site.advisor }}</strong></a>, vise à développer des méthodes de quadrature efficaces pour les équations intégrales de frontière qui résolvent le problème de l'évaluation en champ proche, et permettent de caractériser efficacement le champ proche au sein de la diffraction multiple par des structures de particules allongées.
+  Cette thèse, supervisée par <a href="{{ site.advisor_url }}" target="_blank" rel="noopener"><strong>{{ site.advisor }}</strong></a>, vise à développer des méthodes de quadrature efficaces pour les équations intégrales de frontière qui résolvent le problème de l'évaluation en champ proche, et permettent de le caractériser efficacement lors de la diffraction multiple par des structures de particules allongées.
 </p>
 
 <h2>Financements</h2>
 <p>
-  Mon contrat doctoral est financé par un Contrat Doctoral Spécifique Normalien (CDSN) dont j'ai été lauréat suite à la campagne 2026. Les autres frais de la thèse sont couverts par l'ICJ et le projet ANR JCJC BISCOTTI de Camille Carvalho.
+  Mon contrat doctoral est financé par un Contrat Doctoral Spécifique Normalien (CDSN) que j'ai obtenu lors de la campagne 2026. Les autres frais de la thèse sont couverts par l'ICJ et le projet ANR JCJC BISCOTTI de Camille Carvalho.
 </p>
 
 
 
-<h2>Stages & travaux de recherche antérieurs</h2>
+<h2>Stages et travaux de recherche antérieurs</h2>
 {% for internship in site.internships %}
 <div class="card">
   <span class="card__label">{{ internship.date }} · {{ internship.location }}</span>
@@ -67,7 +67,7 @@ permalink: /recherche/
   <span class="card__label">2022 · Université de Strasbourg</span>
   <h3>Mémoires de Licence 3</h3>
   <ul style="margin: 0.4rem 0 0 1.2rem; padding: 0; color: var(--ink-soft); font-size: 0.95rem;">
-    <li><strong>Courbes de Julia sans tangentes</strong> (sous la direction de Charles Francès).</li>
+    <li><strong>Courbes de Julia sans tangente</strong> (sous la direction de Charles Francès).</li>
     <li><strong>Modélisation du flux sanguin par différences finies</strong> (avec Ewan Contentin, sous la direction de Clémentine Courtès).</li>
   </ul>
 </div>
