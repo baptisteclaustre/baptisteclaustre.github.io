@@ -99,14 +99,14 @@
   ],
   "internships": [
     {
-      "date": "Avr. – Août 2026",
-      "date_en": "Apr. – Aug. 2026",
+      "date": "Avril – Août 2026",
+      "date_en": "April – Aug. 2026",
       "title_fr": "Stage de Master 2 : Approche par équations intégrales de frontière pour les diagrammes de bandes dans les cristaux photoniques",
       "title_en": "Master 2 Internship: A boundary integral equation approach to photonic crystal band structures",
       "location": "ICJ, INSA de Lyon",
       "supervisor": "Camille Carvalho",
-      "details_fr": "Modélisation et simulation numérique par équations intégrales de frontière (BIE) pour l'étude des diagrammes de bandes et des motifs de Moiré (collaboration avec l'équipe i-lum de l'INL).",
-      "details_en": "Exploring boundary integral equations (BIEs) to model band diagram and simulate Moiré patterns in collaboration with the INL i-lum team."
+      "details_fr": "Modélisation et simulation numérique par équations intégrales de frontière (BIE) pour l'étude des diagrammes de bandes et des motifs de Moiré (collaboration avec l'équipe i-lum de l'INL, en particulier Lydie Ferrier et Marion Lavignac).",
+      "details_en": "Exploring boundary integral equations (BIEs) to model band diagram and simulate Moiré patterns in collaboration with the INL i-lum team (Lydie Ferrier and Marion Lavignac)."
     },
     {
       "date": "Mai – Août 2024",
@@ -124,7 +124,7 @@
       "date_en": "May – June 2023",
       "title_fr": "Stage de Licence 3: Théorie des jeux et trafic routier",
       "title_en": "Bachelor Internship (L3): Game theory and traffic flow",
-      "location": "Institut Camille Jordan, Université Lyon 1",
+      "location": "ICJ, Université Lyon 1",
       "supervisor": "Filippo Santambrogio",
       "details_fr": "Étude des équilibres de Wardrop et du prix de l'anarchie appliqués au trafic routier.",
       "details_en": "Study of Wardrop equilibria and the price of anarchy in road traffic."
@@ -134,7 +134,7 @@
     {
       "period": "Sept. 2023 – Juin 2026",
       "period_en": "Sept. 2023 – June 2026",
-      "title_fr": "Interrogateur oral (colleur) en Mathématiques",
+      "title_fr": "Interrogateur oral (colleur) en mathématiques",
       "title_en": "Mathematics Oral Examiner (colleur) in CPGE",
       "institutions": "Lycée La Martinière Monplaisir, Lycée Édouard Branly et ENS de Lyon",
       "details_fr": "Classes de MPSI, MP2I, PCSI, TSI et PT. Oraux blancs CPES (ENS de Lyon).",
