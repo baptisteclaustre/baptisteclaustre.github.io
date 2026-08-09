@@ -61,10 +61,10 @@
     <div class="hero__container">
       <img src="/images/photo.jpg" alt="Photo de {{ site.name }}" class="hero__avatar" width="120" height="120">
       <div class="hero__text">
-        <p class="hero__kicker">{{ site.role[currentLang] }} · {{ site.field[currentLang] }}</p>
         <h2 class="hero__title">{{ site.name }}</h2>
+        <p class="hero__kicker">{{ site.role[currentLang] }} · {{ site.field[currentLang] }}</p>
         <p class="hero__subtitle">
-          <a href="{{ site.lab_url }}" target="_blank" rel="noopener" class="hero__link">{{ site.lab[currentLang] }}</a> — <a href="{{ site.institution_url }}" target="_blank" rel="noopener" class="hero__link">{{ site.institution[currentLang] }}</a>
+          <a href="{{ site.lab_url }}" target="_blank" rel="noopener" class="hero__link">{{ site.lab[currentLang] }}</a> · <a href="{{ site.institution_url }}" target="_blank" rel="noopener" class="hero__link">{{ site.institution[currentLang] }}</a>
         </p>
       </div>
     </div>
@@ -80,7 +80,7 @@
 
     <footer class="colophon">
       <div class="rule"></div>
-      <p>© {{ site.year }} {{ site.name }} — <a href="{{ site.lab_url }}" target="_blank" rel="noopener">Institut Camille Jordan</a> — <a href="{{ site.institution_url }}" target="_blank" rel="noopener">INSA de Lyon</a>.</p>
+      <p>© {{ site.year }} {{ site.name }} · <a href="{{ site.lab_url }}" target="_blank" rel="noopener">Institut Camille Jordan</a> · <a href="{{ site.institution_url }}" target="_blank" rel="noopener">INSA de Lyon</a>.</p>
       <p class="colophon__built">{% if currentLang == 'en' %}Built with <a href="https://www.11ty.dev/">Eleventy</a>, hosted on GitHub Pages.{% else %}Site construit avec <a href="https://www.11ty.dev/">Eleventy</a>, hébergé sur GitHub Pages.{% endif %}</p>
     </footer>
   </div>
