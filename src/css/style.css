@@ -394,3 +394,100 @@ a:focus-visible {
   .page { padding: 2rem 1.1rem 2.5rem; }
   .content h1 { font-size: 1.4rem; }
 }
+
+/* -- Figures et légendes -- */
+
+figure {
+  margin: 2rem 0;
+}
+
+figure img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+/* -- Carte avec image latérale -- */
+
+.card--with-image {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start;
+}
+
+.card--with-image .card__img {
+  flex-shrink: 0;
+  width: 120px;
+  border-radius: 6px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card--with-image .card__body {
+  flex: 1;
+}
+
+@media (max-width: 480px) {
+  .card--with-image {
+    flex-direction: column;
+  }
+  .card--with-image .card__img {
+    width: 100%;
+  }
+}
+
+/* -- Bandeau de logos partenaires -- */
+
+.logo-band {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 1.5rem 1rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+}
+
+.logo-band a {
+  display: flex;
+  align-items: center;
+}
+
+.logo-band img {
+  height: 40px;
+  width: auto;
+  opacity: 0.85;
+  transition: opacity 0.15s ease;
+  filter: grayscale(20%);
+}
+
+.logo-band img:hover {
+  opacity: 1;
+  filter: grayscale(0%);
+}
+
+/* -- Email antispam -- */
+
+.email-box {
+  font-family: var(--font);
+  font-size: 0.95rem;
+  background: var(--paper-raised);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 0.15rem 0.5rem;
+  color: var(--ink);
+  user-select: all;
+}
+

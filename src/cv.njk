@@ -7,7 +7,7 @@ permalink: /cv/
 <span class="kicker">Parcours</span>
 <h1>Curriculum Vitae</h1>
 <p class="lede">
-  Parcours académique, expériences d'enseignement et compétences.
+  Parcours académique et compétences. Mes expériences d'enseignement sont répertoriées dans la section "enseignement" et mes expériences de recherche dans la section "recherche".
 </p>
 
 <h2>Formation et diplômes</h2>
@@ -15,20 +15,24 @@ permalink: /cv/
 <div class="card">
   <span class="card__label">{{ edu.years }}</span>
   <h3>{{ edu.title_fr }}</h3>
-  <p><strong>Établissement :</strong> {{ edu.institution }}</p>
+  <p><strong>Établissement :</strong> {{ edu.institution }}
+  {% if edu.institution == "INSA de Lyon" %}
+      <img src="/images/logo-insa.png" alt="Logo INSA de Lyon" style="height: 18px; vertical-align: middle; margin-left: 0.4rem; opacity: 0.7;">
+    {% endif %}
+    {% if edu.institution == "École Normale Supérieure de Lyon" %}
+      <img src="/images/logo_ens.png" alt="Logo ENS de Lyon" style="height: 18px; vertical-align: middle; margin-left: 0.4rem; opacity: 0.7;">
+    {% endif %}
+    {% if edu.institution == "Université de Strasbourg" %}
+      <img src="/images/logo_strasbourg.png" alt="Logo Université de Strasbourg" style="height: 18px; vertical-align: middle; margin-left: 0.4rem; opacity: 0.7;">
+    {% endif %}
+    {% if edu.institution == "Lycée Carnot (Dijon)" %}
+      <img src="/images/logo_carnot.png" alt="Logo Lycée Carnot" style="height: 18px; vertical-align: middle; margin-left: 0.4rem; opacity: 0.7;">
+    {% endif %}
+  </p>
   {% if edu.details_fr %}<p style="margin-top: 0.2rem; color: var(--pink-deep); font-weight: 700;">{{ edu.details_fr }}</p>{% endif %}
 </div>
 {% endfor %}
 
-<h2>Expériences d'enseignement</h2>
-{% for t in site.teaching %}
-<div class="card">
-  <span class="card__label">{{ t.period }}</span>
-  <h3>{% if t.url %}<a href="{{ t.url }}" target="_blank" rel="noopener">{{ t.title_fr }}</a>{% else %}{{ t.title_fr }}{% endif %}</h3>
-  {% if t.institutions %}<p><strong>Établissements :</strong> {{ t.institutions }}</p>{% endif %}
-  {% if t.details_fr %}<p style="margin-top: 0.2rem;">{{ t.details_fr }}</p>{% endif %}
-</div>
-{% endfor %}
 
 <h2>Compétences et langues</h2>
 <div class="card">

@@ -7,7 +7,7 @@ permalink: /en/cv/
 <span class="kicker">Background</span>
 <h1>Curriculum Vitae</h1>
 <p class="lede">
-  Academic education, degrees, honors, teaching experience, and technical skills.
+  Academic education and skills. My teaching experience is listed in the "Teaching" section and my research experience in the "Research" section.
 </p>
 
 <h2>Education & Degrees</h2>
@@ -15,18 +15,21 @@ permalink: /en/cv/
 <div class="card">
   <span class="card__label">{{ edu.years }}</span>
   <h3>{{ edu.title_en }}</h3>
-  <p><strong>Institution:</strong> {{ edu.institution }}</p>
+  <p><strong>Institution:</strong> {{ edu.institution }}
+  {% if edu.institution == "INSA de Lyon" %}
+      <img src="/images/logo-insa.png" alt="INSA de Lyon logo" style="height: 18px; vertical-align: middle; margin-left: 0.4rem; opacity: 0.7;">
+    {% endif %}
+    {% if edu.institution == "École Normale Supérieure de Lyon" %}
+      <img src="/images/logo_ens.png" alt="ENS de Lyon logo" style="height: 18px; vertical-align: middle; margin-left: 0.4rem; opacity: 0.7;">
+    {% endif %}
+    {% if edu.institution == "Université de Strasbourg" %}
+      <img src="/images/logo_strasbourg.png" alt="University of Strasbourg logo" style="height: 18px; vertical-align: middle; margin-left: 0.4rem; opacity: 0.7;">
+    {% endif %}
+    {% if edu.institution == "Lycée Carnot (Dijon)" %}
+      <img src="/images/logo_carnot.png" alt="Lycée Carnot logo" style="height: 18px; vertical-align: middle; margin-left: 0.4rem; opacity: 0.7;">
+    {% endif %}
+  </p>
   {% if edu.details_en %}<p style="margin-top: 0.2rem; color: var(--pink-deep); font-weight: 700;">{{ edu.details_en }}</p>{% endif %}
-</div>
-{% endfor %}
-
-<h2>Teaching Experience</h2>
-{% for t in site.teaching %}
-<div class="card">
-  <span class="card__label">{{ t.period_en or t.period }}</span>
-  <h3>{% if t.url %}<a href="{{ t.url }}" target="_blank" rel="noopener">{{ t.title_en }}</a>{% else %}{{ t.title_en }}{% endif %}</h3>
-  {% if t.institutions %}<p><strong>Institutions:</strong> {{ t.institutions }}</p>{% endif %}
-  {% if t.details_en %}<p style="margin-top: 0.2rem;">{{ t.details_en }}</p>{% endif %}
 </div>
 {% endfor %}
 
