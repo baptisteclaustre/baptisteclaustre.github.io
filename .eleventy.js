@@ -1,15 +1,13 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/images");
+  eleventyConfig.addPassthroughCopy("src/images"); // ajouter le doss img
+  eleventyConfig.addPassthroughCopy("src/pdf"); // idem pdf
 
   return {
     dir: {
       input: "src",
       output: "_site",
     },
-    // Si ton site est publié sur https://TON-PSEUDO.github.io/NOM-DU-DEPOT/
-    // (dépôt "projet", pas dépôt "TON-PSEUDO.github.io"), décommente la ligne
-    // ci-dessous et remplace NOM-DU-DEPOT par le nom exact de ton dépôt GitHub.
-    // pathPrefix: "/NOM-DU-DEPOT/",
+    pathPrefix: "/",
   };
 };
