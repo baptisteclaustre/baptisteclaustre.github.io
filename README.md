@@ -1,6 +1,6 @@
 
 
-##  Mettre à jour le site après publication
+##  Tuto pour mettre à jour le site après publication
 
 ```bash
 git add .
