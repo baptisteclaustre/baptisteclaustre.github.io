@@ -1,5 +1,4 @@
 module.exports = function (eleventyConfig) {
-  // Copie le CSS et les images tel quel dans le site final
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/images");
 
