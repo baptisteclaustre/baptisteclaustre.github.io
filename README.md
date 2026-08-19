@@ -1,6 +1,6 @@
 Site personnel de Baptiste Claustre, doctorant en mathématiques appliquées à l'INSA de Lyon.
 
-#  Tuto pour mettre à jour le site après publication
+###  Tuto pour mettre à jour le site après publication
 
 ```bash
 git add .
