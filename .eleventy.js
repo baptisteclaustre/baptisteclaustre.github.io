@@ -3,7 +3,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/images");
   eleventyConfig.addPassthroughCopy("src/pdf");
   eleventyConfig.addPassthroughCopy("src/sitemap.xml");
-  leventyConfig.addPassthroughCopy("src/robots.txt");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   return {
     dir: {
