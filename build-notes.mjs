@@ -33,8 +33,12 @@ for (let r = 5; typeof val(r, 1) === 'number'; r++) {
     const raw = val(r, q.col), s = typeof raw === 'number' ? raw : null;
     return { s, p: (s ?? 0) / 4 * q.max };
   });
-  eleves.push({ n: String(val(r, 1)), items, note: items.reduce((a, i) => a + i.p, 0) });
+  // note finale = colonne D du classeur (éventuellement arrondie/ajustée à la main) ; somme = total des points détaillés
+  const somme = items.reduce((a, i) => a + i.p, 0), fin = val(r, 4);
+  eleves.push({ n: String(val(r, 1)), items, somme, note: typeof fin === 'number' ? fin : somme, manque: typeof fin !== 'number' });
 }
+const manquantes = eleves.filter(e => e.manque).length;
+if (manquantes) console.warn(`⚠ ${manquantes} note(s) absente(s) en colonne D : somme des points utilisée.`);
 
 const mean = a => a.reduce((x, y) => x + y, 0) / a.length;
 const med = a => { const s = [...a].sort((x, y) => x - y), m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
@@ -67,7 +71,7 @@ for (const e of eleves) {
   const salt = randomBytes(16), iv = randomBytes(12);
   const base = await webcrypto.subtle.importKey('raw', new TextEncoder().encode(`${e.n}:${code}`), 'PBKDF2', false, ['deriveKey']);
   const key = await webcrypto.subtle.deriveKey({ name: 'PBKDF2', salt, iterations: ITER, hash: 'SHA-256' }, base, { name: 'AES-GCM', length: 256 }, false, ['encrypt']);
-  const payload = { n: e.n, note: e.note, items: e.items };
+  const payload = { n: e.n, note: e.note, somme: e.somme, items: e.items };
   if (AFFICHER_RANG) payload.rang = 1 + notes.filter(x => x > e.note + 1e-9).length;
   const ct = await webcrypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, new TextEncoder().encode(JSON.stringify(payload)));
   out.push({
@@ -87,4 +91,5 @@ const data = {
 mkdirSync(dataDir, { recursive: true });
 writeFileSync(`${dataDir}/notesIE1.json`, JSON.stringify(data));
 if (!SANS_CODE) writeFileSync('codes_IE1.csv', 'numero;code\n' + codes.join('\n') + '\n');
+console.log(`${eleves.filter(e => Math.abs(e.note - e.somme) > 1e-6).length} note(s) différent de la somme des points.`);
 console.log(`${eleves.length} étudiants, ${qs.length} questions, barème ${total}.`);
