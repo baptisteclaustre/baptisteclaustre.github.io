@@ -132,9 +132,8 @@ function afficher(r) {
 
   let h = `<section class="card"><div class="kpis">
     ${kpi(f2(r.note) + ' <small>/ 20</small>', 'Ma note', 'big')}
-    ${kpi(f2(g.mean), 'Moyenne de la classe')}
+    ${kpi(f2(g.mean), 'Moyenne du groupe')}
     ${kpi(f2(g.median), 'Médiane')}
-    ${r.rang ? kpi(r.rang + '<small>/' + D.effectif + '</small>', 'Rang') : ''}
     </div>
   
     <h2>Répartition des notes</h2><div class="hist">${hist}</div></section>`;
