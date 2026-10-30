@@ -136,8 +136,7 @@ function afficher(r) {
     ${kpi(f2(g.median), 'Médiane')}
     ${r.rang ? kpi(r.rang + '<small>/' + D.effectif + '</small>', 'Rang') : ''}
     </div>
-    <p class="mu">Écart à la moyenne : <b class="${delta >= 0 ? 'up' : 'down'}">${delta >= 0 ? '+' : '−'}${f2(Math.abs(delta))}</b>
-    · min ${f2(g.min)} · max ${f2(g.max)}${D.total > 20 ? ` · barème sur ${fs(D.total)} (bonus de ${fs(D.total - 20)})` : ''}</p>
+  
     <h2>Répartition des notes</h2><div class="hist">${hist}</div></section>`;
 
   for (const ex of D.exercices) {
